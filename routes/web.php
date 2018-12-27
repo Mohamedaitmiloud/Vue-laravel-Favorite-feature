@@ -17,6 +17,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
+
+
 Route::get('/', 'PostsController@index');
 
 Route::post('favorite/{post}', 'PostsController@favoritePost');

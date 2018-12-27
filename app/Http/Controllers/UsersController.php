@@ -7,10 +7,17 @@ use Auth;
 
 class UsersController extends Controller
 {
-    public function myFavorites()
-{
-    $myFavorites = Auth::user()->favorites;
 
+    //
+    // ──────────────────────────────────────── 1 ──────────
+    //   :::::: myFavorites method returns the favorites posts by the auth user
+    // ──────────────────────────────────────────────────
+    //
+
+    
+
+    public function myFavorites(){
+    $myFavorites = Auth::user()->favorites;
     return view('users.my_favorites', ['myFavorites'=>$myFavorites]);
-}
+    }
 }
